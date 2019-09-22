@@ -1,7 +1,5 @@
 # Start-Stop-Dev-Services
 
-These are the scripts I use in order to start and stop the Windows Services I have for development.
-
 If you aim to use it, I'd recommend to adapt the `$serviceNames` to your needs. This is my current usage:
 
 `$serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'com.docker.service')`
