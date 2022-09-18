@@ -2,7 +2,9 @@
 
 If you aim to use it, I'd recommend to adapt the `$serviceNames` to your needs. This is my current usage:
 
-`$serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'com.docker.service')`
+~~`$serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'com.docker.service')`~~
+
+`$serviceNames = ('MSSQLSERVER')`
 
 I also created shortcuts on my desktop, to have them easily accessible, using the following target:
 
