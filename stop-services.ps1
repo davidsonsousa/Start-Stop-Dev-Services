@@ -1,11 +1,10 @@
 # Make sure to use the elevated permissions
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit 
+    Start-Process pwsh.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit 
 }
 
 # List of services to be started
-$serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'com.docker.service')
-# $serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'docker', 'com.docker.service')
+$serviceNames = ('MSSQLSERVER')
 
 Write-Host '>> STOP SERVICES <<' -BackgroundColor White -ForegroundColor DarkRed
 Write-Host ''
